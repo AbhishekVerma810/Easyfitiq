@@ -1,0 +1,70 @@
+/* Center the content vertically and horizontally */
+ion-header{
+  ion-toolbar{
+   --color:white;
+  --background: #2F5874;
+  ion-back-button{
+    color:white;
+  }
+  ion-title{
+
+  }
+  }
+}
+
+ion-content {
+    --ion-background-color: #f7f7f7; /* Set the background color for the content area */
+  }
+  
+  .privacy-policy-content {
+    padding: 20px; /* Add padding to the content */
+    font-size: 16px; /* Set the font size for the entire content */
+    line-height: 1.5; /* Set line height for better readability */
+    text-align: justify; /* Justify the text for a cleaner look */
+  }
+  
+  .privacy-policy-content h4 {
+    font-size: 18px; /* Increase font size for section headings */
+    font-weight: bold; /* Add bold style to section headings */
+    margin-top: 20px; /* Add spacing above section headings */
+  }
+  
+  .privacy-policy-content a {
+    color: #a6aaad; /* Set link color to a blue shade */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .privacy-policy-content a:hover {
+    text-decoration: underline; /* Add underline on hover for links */
+  }
+  
+  /* Style the ion-back-button (if needed) */
+  ion-back-button {
+    --color: #f7f7f7; /* Set the color of the back button */
+  }
+  
+  /* Style the ion-toolbar */
+  ion-toolbar {
+    --ion-background-color: #a6a9ac; /* Set the background color for the toolbar */
+    color: #fff; /* Set the text color for the toolbar */
+  }
+  
+  /* Style the ion-title (if needed) */
+  ion-title {
+    font-size: 20px; /* Increase font size for the title */
+    font-weight: bold; /* Add bold style to the title */
+    color: white; 
+}
+  
+  /* Style the ion-buttons (if needed) */
+  ion-buttons {
+    margin-left: 10px; /* Adjust the left margin of the buttons */
+  }
+  
+  /* Style the ion-button (if needed) */
+  ion-button {
+    --background: #aaacaf; /* Set the background color for the button */
+    --color: #fff; /* Set the text color for the button */
+    margin-top: 20px; /* Add spacing above the button */
+  }
+  

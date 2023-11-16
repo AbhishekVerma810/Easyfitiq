@@ -1,0 +1,86 @@
+ion-header{
+  ion-toolbar{
+    color: #fff;
+    --background: #2F5874;
+  }
+}
+
+ion-content{
+    --background: white;
+    .profile-container {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      text-align: center;
+      ion-icon{
+        position: absolute;
+        top: 60px;
+        font-size: 29px;
+        color: rgb(77, 75, 75);
+      }
+    }
+    .profile-picture {
+      --border-width: 3px;
+      --border-color: #007BFF;
+      margin: 0 auto;
+    }
+    
+    .profile-name {
+      font-size: 24px;
+      margin-top: 10px;
+    }
+    
+    .profile-email {
+      color: #888;
+    }
+    
+    .profile-details {
+      margin-top: 20px;
+    }
+    
+    h2 {
+      font-size: 20px;
+      border-bottom: 2px solid #4e5052;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+    form {
+      ion-item {
+        --ion-item-text-input-color: #333;
+          margin-bottom: 20px;
+          border: 2px solid darkgray;
+          border-radius: 20px;
+        }
+        ion-button {
+          display: block;
+          margin-top: 3rem;
+          --box-shadow: none;
+          --border-radius: 10px;
+          --background: #2F5874;
+          height: 48px;
+          font-size: 1rem;
+          color: #fff;
+          margin-bottom: 0.5rem;
+          text-transform: initial;
+        }
+        
+    }
+    .input-container {
+      display: flex;
+      align-items: center;
+      gap: 10px; 
+    }
+    
+    .input-container ion-select {
+      width: 70px;
+      border: 2px solid darkgrey;
+      border-radius: 14px;
+      padding: -4px;
+      margin-top: -20px;
+     }
+    
+    .input-container ion-input {
+      flex-grow: 1; 
+    }
+    }

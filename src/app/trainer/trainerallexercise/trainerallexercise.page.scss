@@ -1,0 +1,63 @@
+ion-header{
+  ion-toolbar{
+   color:white;
+  --background: #2F5874;
+  }
+}
+
+
+
+.assignment-card {
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out; 
+  }
+  .assignment-header {
+    color: white;
+    font-weight: bold;
+    --background: #2F5874;
+  }
+
+  .assignment-item {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+  }
+  .exercise-name{
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: black;
+}
+  .client-name {
+    font-size: 0.9rem;
+    color: black;
+  }
+  .days-of-week {
+    font-size: 0.9rem;
+    color: black;
+    
+  }
+ .reps, .sets, .duration {
+    font-size: 0.9rem;
+  }
+  ion-fab{
+    ion-fab-button{
+      --background: #2F5874;
+        ion-icon{
+            color: white;
+            font-size: 25px;
+        }
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

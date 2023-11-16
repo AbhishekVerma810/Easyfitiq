@@ -1,0 +1,22 @@
+<ion-header [translucent]="true"> 
+</ion-header>
+  <ion-button class="lanuage_button" fill="outline" slot="end">
+    <ion-select
+    
+      slot="end"
+      placeholder="Language"
+      (ionChange)="handleChange($event)"
+      (ionCancel)="handleCancel()"
+      (ionDismiss)="handleDismiss()"
+    >
+      <ion-select-option value="en">English</ion-select-option>
+      <ion-select-option value="arbic">عربي</ion-select-option>
+    </ion-select>
+  </ion-button>
+<div class="splash-container">
+   <img class="logo" src="../.././assets/image/easy_fit_logo.png" alt="Logo" />
+   <div class="button-container">
+    <ion-button  shape="round" (click)="redirectToClientPage()">{{'Client' | translate}}</ion-button>
+    <ion-button  shape="round" (click)="redirectToTrainerPage()">{{'Trainer' | translate}}</ion-button>
+  </div>
+</div>

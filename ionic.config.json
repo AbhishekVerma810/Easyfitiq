@@ -1,0 +1,7 @@
+{
+  "name": "betterhealth",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

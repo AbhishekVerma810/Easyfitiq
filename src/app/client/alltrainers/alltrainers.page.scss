@@ -1,0 +1,28 @@
+
+ion-header{
+    ion-toolbar{
+        --background:#2F5874;
+        color: white;
+    }
+  }
+  ion-list {
+      background-color: #fff; 
+    }
+    
+    ion-item {
+      border-bottom: 1px solid #ccc; 
+    }
+    
+    ion-avatar ion-icon {
+      font-size: 36px; 
+      color: #2F5874;
+    }
+    
+    ion-label h2 {
+      font-size: 1.2rem; 
+    }
+    
+    ion-label p {
+      font-size: 0.9rem; 
+    }
+    

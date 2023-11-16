@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{'track_body' | translate}}</ion-title>
+
+  <ion-buttons slot="end">
+    <ion-button  shape="round" (click)="viewHistoricData()">{{'view_all' | translate}}</ion-button>
+  </ion-buttons>
+
+</ion-toolbar>
+</ion-header>
+
+<ion-content class="track-body-page">
+  <ion-card class="measurement-card">
+    <ion-card-header>
+     <h2> {{'track_body_measurements' | translate}}</h2> 
+    </ion-card-header>
+    <ion-card-content >
+      <ion-list>
+        <ion-card>
+        <ion-item>
+          <ion-label position="floating">{{'Weight' | translate}}</ion-label>
+          <ion-input type="number" [(ngModel)]="weight"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">{{'Waist' | translate}}</ion-label>
+          <ion-input type="number" [(ngModel)]="waist"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">{{'Chest' | translate}}</ion-label>
+          <ion-input type="number" [(ngModel)]="chest"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating"> {{'Biceps' | translate}}</ion-label>
+          <ion-input type="number" [(ngModel)]="biceps"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating"> {{'Triceps' | translate}}</ion-label>
+          <ion-input type="number" [(ngModel)]="triceps"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating"> {{'Neck' | translate}}</ion-label>
+          <ion-input type="number" [(ngModel)]="neck"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating"> {{'Thighs' | translate}}</ion-label>
+          <ion-input type="number" [(ngModel)]="thighs"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating"> {{'Calves' | translate}}</ion-label>
+          <ion-input type="number" [(ngModel)]="calves"></ion-input>
+        </ion-item>
+        <!-- <ion-item>
+          <ion-label position="floating">Others</ion-label>
+          <ion-select [(ngModel)]="others">
+            <ion-select-option value="Option 1">Option 1</ion-select-option>
+            <ion-select-option value="Option 2">Option 2</ion-select-option>
+       
+          </ion-select>
+        </ion-item> -->
+        <!-- <ion-item mode="md">
+        
+          <ion-input mode="md" type="date" [(ngModel)]="date"></ion-input>
+        </ion-item> -->
+        <div class="date_style">
+          <input type="date" placeholder="{{'Date' | translate}}" [(ngModel)]="date" required/>
+        </div>
+      </ion-card>
+      </ion-list>
+    </ion-card-content>
+  <ion-button expand="full" shape="round" (click)="saveMeasurement()">{{'save' | translate}}</ion-button>
+   
+  </ion-card>
+
+  <!-- <ion-button expand="full" shape="round" (click)="viewHistoricData()">{{'view_all' | translate}}</ion-button> -->
+
+</ion-content>
+

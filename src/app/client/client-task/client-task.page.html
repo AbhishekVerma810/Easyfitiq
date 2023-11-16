@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" mode="md">
+        <ion-back-button defaultHref="/defaultHref"></ion-back-button>
+    </ion-buttons> 
+        <ion-title>{{'Exercise_Details' | translate}}</ion-title>
+    </ion-toolbar>
+    <div class="header_toolbar">
+      <h2>{{monthAbbreviation}} {{dates}}</h2>
+      <ion-checkbox [(ngModel)]="iscompleted" (ionChange)="updateCheckbox()"></ion-checkbox>
+    </div>
+  </ion-header>
+  <ion-content>
+ <ion-card *ngFor="let exercise of exercises; let i = index">
+  
+  <ion-card-content>
+    <h1>{{ exercise.exerciseName }}</h1>
+    <div class="exercise_history" (click)="navigatehistory(exercise.exerciseName)" ><ion-icon name="refresh-circle-outline"></ion-icon><h2>{{'Exercise_History' | translate}}</h2></div>
+     <p>{{'Sets' | translate}} : {{ exercise.sets }}</p>
+     <p>{{'Reps' | translate}} : {{ exercise.repetitions }}</p>
+     <div class="excercise_video"><h2>{{exercise.exerciseName}}</h2>   <ion-icon
+      (click)="showVideos(i)"
+      [name]="selectedVideoIndex === i ? 'videocam-outline' : 'videocam-off-outline'"
+    ></ion-icon></div>
+     <iframe *ngIf="selectedVideoIndex === i" width="400" height="200" [src]="videoLink"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+   
+    </ion-card-content>
+
+  <!-- <ion-list>
+    <ion-item *ngFor="let day of exercise.daysOfWeek; let i = index">
+      <div class="weksofdays">
+        <ion-label>{{ day.day }}</ion-label>
+        <ion-checkbox [(ngModel)]="day.iscompleted" (ionChange)="updateCheckbox(exercise.uid, day.day, day.iscompleted)"></ion-checkbox>
+      </div>
+    </ion-item>
+  </ion-list> -->
+ 
+  <div class="input_box">
+    <form [formGroup]="form" (ngSubmit)="Addresults(exercise.exerciseName)">
+      <ion-input
+        formControlName="userInput"
+        placeholder="{{'Add_Result' | translate}}"
+      ></ion-input>
+      <!-- <ion-button type="submit"  shape="round">{{'submit' | translate}}</ion-button> -->
+      <ion-button type="submit"  shape="round"><ion-icon name="checkmark-outline"></ion-icon></ion-button>
+    </form>
+  </div>
+ </ion-card>
+      <!-- <ion-item class="input_box">
+         <ion-input placeholder="Add Result" [(ngModel)]="userInput"></ion-input>
+         <ion-button (click)="Addresult()">Submit</ion-button>
+       </ion-item>  -->
+</ion-content>
+
+

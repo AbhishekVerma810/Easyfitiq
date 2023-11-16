@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>{{'classified' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar [debounce]="1000" (ionInput)="handleInput($event)"></ion-searchbar>
+  <ion-list *ngIf="userdata.length > 0">
+    <ion-card class="Trainer_card" lines="none" *ngFor="let user of results" (click)="navigateToUserDetail(user.uid)">
+      <!-- <ion-card> -->
+      <div>
+          <img [src]= "user.imageURL ? user.imageURL : 'https://ionicframework.com/docs/img/demos/avatar.svg'">
+      </div>
+      <ion-label>
+        <h2>{{ user.name }}</h2>
+        <h4>{{user.email}}</h4>
+      </ion-label>
+    <!-- </ion-card> -->
+    </ion-card>
+  </ion-list>
+</ion-content>

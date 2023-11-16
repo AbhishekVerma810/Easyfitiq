@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{'Measurements History' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let date of getObjectKeys(assignmentsByDate)" class="assignment-card">
+    <ion-card-header class="assignment-header">
+      {{ date }} 
+    </ion-card-header>
+    <ion-card-content>
+      <!-- <ion-list>
+        <ion-item *ngFor="let assignment of assignmentsByDate[date]" class="assignment-item">
+          <h2 class="exercise-name">{{ assignment.exerciseName }}</h2>
+          <p class="client-name">Client: {{ assignment.clientName }}</p>
+          <p class="days-of-week">Days: {{ assignment.daysOfWeek.join(', ') }}</p>
+          <p class="reps">Reps: {{ assignment.reps }}</p>
+          <p class="sets">Sets: {{ assignment.sets }}</p>
+          <p class="duration">Duration: {{ assignment.duration }}</p>
+         </ion-item>
+      </ion-list> -->
+      <ion-list>
+        <ion-item *ngFor="let assignment of assignmentsByDate[date]" class="assignment-item"> 
+          <!-- <ion-item *ngFor="let assignment of exerciseAssignments" class="assignment-item"> -->
+          <ion-grid>
+            <ion-row>
+              <ion-col size="12">
+                <h3 class="exercise-name">{{ assignment.exerciseName }}</h3>
+                <p class="reps">{{'Weight' | translate}} : {{ assignment.weight}} </p>
+                <p class="sets"> {{'Waist' | translate}} : {{ assignment.waist }} </p>
+                <p class="duration"> {{'Chest' | translate}} : {{ assignment.chest }} </p>
+                <p class="duration"> {{'Biceps' | translate}} : {{ assignment.biceps }} </p>
+                <p class="duration"> {{'Triceps' | translate}} : {{ assignment.triceps }}</p>
+                <p class="duration">{{'Thighs' | translate}}{{ assignment.thighs }} </p>
+                <p class="duration">  {{'Neck' | translate}} : {{ assignment.neck }} </p>
+                <p class="duration"> {{'Calves' | translate}} : {{ assignment.calves }} </p>
+               
+               
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-list>
+      
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

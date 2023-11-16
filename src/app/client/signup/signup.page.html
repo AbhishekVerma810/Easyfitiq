@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-content class="ion-padding">
+    <h1>{{'welcome' | translate}}</h1>
+    <h3>{{'signup_to_continue' | translate}}</h3>
+    <form [formGroup]="loginForm" (ngSubmit)="submitForm()" novalidate>
+      <ion-input type="text" formControlName="name" placeholder="{{'Enter_your_name' | translate}}"></ion-input>
+      <ion-input type="email" formControlName="email" placeholder="{{'Enter_your_email' | translate}}"></ion-input>
+      <ion-input type="password" formControlName="password"
+        placeholder="{{'Enter_your_password' | translate}}"></ion-input>
+      <!-- <div style="height: 2px"
+        *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)"
+        class="error">
+        <small style="color: #E01111" *ngIf="loginForm.get('password')?.errors?.['required']">Password is
+          required.</small>
+      </div> -->
+      <div class="input-container">
+        <ion-select type="number" placeholder="{{'Select_Country_Code' | translate}}" mode="md"
+          formControlName="selectedCountryCode">
+          <ion-select-option value=+1>+1</ion-select-option>
+          <ion-select-option value=+44>+44</ion-select-option>
+          <ion-select-option value=+91>+91</ion-select-option>
+          <ion-select-option value=+88>+88</ion-select-option>
+          <ion-select-option value=+01>+01</ion-select-option>
+          <ion-select-option value=+002>+002</ion-select-option>
+          <ion-select-option value=+08>+08</ion-select-option>
+          <ion-select-option value=+4>+4</ion-select-option>
+        </ion-select>
+        <ion-input type="number" formControlName="number" placeholder="{{'Enter_your_number' | translate}}"></ion-input>
+      </div>
+      <ion-input type="text" formControlName="address" placeholder="{{'Enter_your_address' | translate}}"></ion-input>
+      <ion-button expand="full" shape="round"  type="submit">{{'signup' |
+        translate}}</ion-button>
+    </form>
+    <p (click)="redirectToLoginPage()" class="footer-text">{{'I_Am_A_User' | translate}} <a>{{'login' | translate}}</a>
+    </p>
+  </ion-content>
+</ion-content>

@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- <ion-buttons mode="md" slot="start" (click)="navigateBack()">
+      <ion-back-button defaultHref="/">back</ion-back-button>
+    </ion-buttons> -->
+    <ion-title>{{'Create_Exercise' | translate}}</ion-title>
+   </ion-toolbar>
+  
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{'Assign_Exercise' | translate}}</ion-card-title>
+    </ion-card-header>
+      <ion-card-content>
+      <form [formGroup]="exerciseForm" (ngSubmit)="submitForm()" novalidate>
+      <ion-item>
+          <ion-label position="floating">{{'Enter_Exercise_Name' | translate}}</ion-label>
+          <ion-input formControlName="exerciseName" required></ion-input>
+      </ion-item>
+      <!-- <ion-item mode="md">
+        <ion-select  placeholder="{{'Select_excesss' | translate}}" formControlName="exerciseName">
+          <ion-select-option value="Squat">Squat</ion-select-option>
+          <ion-select-option value="Leg press">Leg press</ion-select-option>
+          <ion-select-option value="Lunge	">Lunge	</ion-select-option>
+          <ion-select-option value="Leg extension">Leg extension</ion-select-option>
+          <ion-select-option value="Leg curl">Leg curl</ion-select-option>
+          <ion-select-option value="Standing calf raise">Standing calf raise</ion-select-option>
+          <ion-select-option value="Seated calf raise">Seated calf raise</ion-select-option>
+          <ion-select-option value="Bench press	">Bench press	</ion-select-option>
+          <ion-select-option value="Lunge	">Lunge	</ion-select-option>
+          <ion-select-option value="Chest fly	">Chest fly	</ion-select-option>
+          <ion-select-option value="Push-up	">Push-up	</ion-select-option>
+          <ion-select-option value="Pull-down		">Pull-down		</ion-select-option>
+          <ion-select-option value="Pull-up	">Pull-up	</ion-select-option>
+          <ion-select-option value="Bent-over row	">Bent-over row	</ion-select-option>
+          <ion-select-option value="Upright row	">Upright row	</ion-select-option>
+          <ion-select-option value="Shoulder press	">Shoulder press	</ion-select-option>
+          <ion-select-option value="Lateral raise	">Lateral raise	</ion-select-option>
+          <ion-select-option value="Shoulder shrug	">Shoulder shrug	</ion-select-option>
+          <ion-select-option value="Triceps extension	">Triceps extension	</ion-select-option>
+          <ion-select-option value="Pushdown	">Pushdown	</ion-select-option>
+          <ion-select-option value="Biceps curl	">Biceps curl	</ion-select-option>
+          <ion-select-option value="Crunch	">Crunch	</ion-select-option>
+          <ion-select-option value="Russian twist	">Russian twist	</ion-select-option>
+          </ion-select>
+      </ion-item> -->
+     
+      
+      <!-- <ion-item>
+        <ion-input mode="md" type="date" placeholder="End date" formControlName="endDate" required></ion-input>
+      </ion-item> -->
+      <!-- <ion-item mode="md">
+        <ion-select multiple="true" placeholder="Select Days of the Week" formControlName="daysOfWeek">
+          <ion-select-option value="Monday">Monday</ion-select-option>
+          <ion-select-option value="Tuesday">Tuesday</ion-select-option>
+          <ion-select-option value="Wednesday">Wednesday</ion-select-option>
+          <ion-select-option value="Thursday">Thursday</ion-select-option>
+          <ion-select-option value="Friday">Friday</ion-select-option>
+          <ion-select-option value="Saturday">Saturday</ion-select-option>
+          <ion-select-option value="Sunday">Sunday</ion-select-option>
+        </ion-select>
+      </ion-item> -->
+      <!-- <ion-item>
+      <ion-select multiple="false" placeholder="Select rest of day" formControlName="restday">
+          <ion-select-option value="Monday">Monday</ion-select-option>
+          <ion-select-option value="Tuesday">Tuesday</ion-select-option>
+          <ion-select-option value="Wednesday">Wednesday</ion-select-option>
+          <ion-select-option value="Thursday">Thursday</ion-select-option>
+          <ion-select-option value="Friday">Friday</ion-select-option>
+          <ion-select-option value="Saturday">Saturday</ion-select-option>
+          <ion-select-option value="Sunday">Sunday</ion-select-option>
+        </ion-select>
+      </ion-item> -->
+      <ion-item>
+      <ion-label position="floating">{{'Sets' | translate}}</ion-label>
+        <ion-input type="number" formControlName="sets" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">{{'Reps' | translate}}</ion-label>
+        <ion-input type="number" formControlName="repetitions" required></ion-input>
+      </ion-item>
+      <ion-item>
+      <ion-label position="floating">{{'Link' | translate}}</ion-label>
+        <ion-input formControlName="youtubeLink" required></ion-input>
+      </ion-item>
+      <div class="date_style">
+        <input type="date" placeholder="{{'Date' | translate}}" formControlName="startDate"   [min]="getMinDate()" required/>
+      </div>
+     <ion-button expand="full" shape="round" type="Submit">{{'submit' | translate}}</ion-button>
+    </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

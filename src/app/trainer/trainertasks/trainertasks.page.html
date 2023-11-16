@@ -1,0 +1,25 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{'chat' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full">
+    <ion-item *ngFor="let user of userList">
+      <ion-label>
+        <h2>{{ user.name }}</h2>
+        <p>{{user.email}}</p>
+      </ion-label>
+      <ion-avatar slot="end" (click)="openWhatsApp(user.selectedCountryCode,user.number)">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+      </ion-avatar>
+      <ion-avatar slot="end" (click)="openTelegram(user.selectedCountryCode,user.number)">
+        <img src="../../../assets/image/telegram.png"/>
+      </ion-avatar>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+

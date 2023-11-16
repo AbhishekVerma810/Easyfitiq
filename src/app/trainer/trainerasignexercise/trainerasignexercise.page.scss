@@ -1,0 +1,42 @@
+ion-header{
+  ion-toolbar{
+   color:white;
+  --background: #2F5874;
+  }
+}
+
+
+
+ion-card {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  ion-item {
+    margin-bottom: 20px;
+    border: 2px solid darkgray;
+    border-radius: 20px;
+
+  }
+  
+ 
+  ion-button {
+    display: block;
+    margin-top: 3rem;
+    --box-shadow: none;
+    --border-radius: 10px;
+    --background: #2F5874;
+    height: 48px;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    text-transform: initial;
+  }
+  ion-label{
+    color: black;
+  }
+  ion-datetime {
+    width: 100%;
+  }
+  

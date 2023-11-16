@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" mode="md">
+      <ion-back-button defaultHref="/defaultHref"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <div class="profile-container">
+    <div class="profile-header">
+      <div class="profile_image" (click)="getPicture()">
+        <ion-avatar class="profile-picture">
+          <img [src]= "imageUrl ? imageUrl : 'https://ionicframework.com/docs/img/demos/avatar.svg'">
+        </ion-avatar>
+      </div>
+      <h1 class="profile-name">{{ name }}</h1>
+      <p class="profile-email">{{ email }}</p>
+    </div>
+    <div class="profile-details">
+      <h2>{{'profile_details' | translate}}</h2>
+      <form (ngSubmit)="updateProfile()">
+        <ion-item>
+          <ion-label position="stacked">{{'Name' | translate}}</ion-label>
+          <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">{{'Email' | translate}}</ion-label>
+          <ion-input type="email" [(ngModel)]="email" name="email" readonly></ion-input>
+        </ion-item>
+        <!-- <ion-item>
+          <ion-label position="stacked">{{'ContactNo' | translate}}</ion-label>
+          <ion-input [(ngModel)]="contactNo" name="contactNo" type="tel"></ion-input>
+        </ion-item> -->
+        <ion-item>
+          <ion-label position="stacked">{{'City' | translate}}</ion-label>
+          <ion-textarea name="address" [(ngModel)]="address"></ion-textarea>
+        </ion-item>
+        <div class="input-container">
+          <ion-select type="number" placeholder="{{'Select_Country_Code' | translate}}" mode="md"
+            [(ngModel)]="selectedCountryCode" name="selectedCountryCode">
+            <ion-select-option value=+1>+1</ion-select-option>
+            <ion-select-option value=+44>+44</ion-select-option>
+            <ion-select-option value=+91>+91</ion-select-option>
+            <ion-select-option value=+88>+88</ion-select-option>
+            <ion-select-option value=+01>+01</ion-select-option>
+            <ion-select-option value=+002>+002</ion-select-option>
+            <ion-select-option value=+08>+08</ion-select-option>
+            <ion-select-option value=+4>+4</ion-select-option>
+            </ion-select>
+          <ion-item>
+            <ion-input type="number"  [(ngModel)]="contactNo" name="contactNo" placeholder="{{'Enter_your_number' | translate}}"></ion-input>
+         </ion-item>
+        </div>
+        <ion-button expand="full" shape="round" type="submit">{{'save_profile' | translate}}</ion-button>
+      </form>
+    </div>
+  </div>
+</ion-content>

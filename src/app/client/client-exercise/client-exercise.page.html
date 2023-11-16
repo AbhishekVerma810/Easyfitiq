@@ -1,0 +1,28 @@
+
+<ion-header [translucent]="true">
+ <ion-toolbar>
+    <!-- <ion-buttons slot="start" mode="md">
+      <ion-back-button defaultHref="/defaultHref"></ion-back-button>
+  </ion-buttons>  -->
+    <ion-title>{{'Exercise' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-card *ngFor="let item of outputArray" class="assignment-card" (click)="navigatetsak(item.startDate)">
+    <ion-avatar class="profile-picture">
+      <img src="../../../assets/image/weight.png" alt="Exercise Image" />
+    </ion-avatar>
+    <div>
+      <ion-card-header class="assignment-header">
+      <h1>{{ item.dayName }} - {{ item.date }} </h1>
+      </ion-card-header>
+      <ion-card-content  *ngFor="let exercise of item.data" >
+        <ion-list>
+          <ion-item class="assignment-item">
+            <h2 class="exercise-name">{{ exercise.exerciseName }}</h2>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </div>
+  </ion-card>
+</ion-content>

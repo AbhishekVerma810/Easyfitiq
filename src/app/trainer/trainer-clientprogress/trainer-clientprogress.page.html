@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+     <ion-title style="margin-top: 20px;">{{'progress' | translate}}</ion-title>
+     <div class="date_style">
+      <input type="date" placeholder="Start date" [(ngModel)]="selectedDate" required/>
+      <ion-button (click)="filterExercises()"><ion-icon name="search-outline"></ion-icon></ion-button>
+    </div>
+    </ion-toolbar>
+  </ion-header>
+<ion-content [fullscreen]="true">
+  <ion-card *ngFor="let item of outputArray" class="assignment-card">
+    
+    <div>
+      <ion-card-header class="assignment-header">
+        <h1> {{ item.dayName }} -{{ item.date }} </h1>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list *ngFor="let exercise of item.data">
+          <ion-item class="assignment-item">
+            <h2 class="exercise-name">{{ exercise.exerciseName }}</h2>
+          </ion-item>
+        </ion-list>
+    </ion-card-content>
+    </div>
+    <h3 [ngClass]="{'completed': item.iscomplete, 'not-met': !item.iscomplete}">
+      {{ item.iscomplete ? 'Completed' : 'Not Met' }}
+    </h3>
+  </ion-card>
+</ion-content>
+
+

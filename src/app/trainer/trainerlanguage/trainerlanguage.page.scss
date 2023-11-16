@@ -1,0 +1,30 @@
+/* Center the content vertically and horizontally */
+ion-header{
+  ion-toolbar{
+   color:white;
+  --background: #2F5874;
+  }
+}
+ion-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  ion-list{
+    margin-top: 20px;
+  }
+  ion-label {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  ion-button {
+    margin-top: 20px;
+    height: 45px;
+    margin-left: 10px;
+    margin-right: 20px;
+    --background: #2F5874;
+    --color: #fff; 
+  }
+  

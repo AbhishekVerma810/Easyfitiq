@@ -1,0 +1,118 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import '@ionic/angular/css/display.css';
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+@font-face {
+    font-family: 'Kanit-Regular';
+    src: url('../src/assets/fonts/Kanit/Kanit-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Kanit-Regular';
+}
+.progress,
+.progress-indeterminate {
+    --background-color: rgb(110, 113, 117);
+    height: 100px;
+    z-index: 2;
+}
+.input-label-placement-start.sc-ion-input-md-h .input-wrapper.sc-ion-input-md {
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding: 10px;
+}
+.alert-button.sc-ion-alert-ios:last-child {
+    border-right: 0;
+    font-weight: bold;
+    color: #a9a8a8;
+}
+.alert-button.sc-ion-alert-ios {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-width: 50%;
+    height: 44px;
+    border-top: 0.55px solid rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.2);
+    border-right: 0.55px solid rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.2);
+    background-color: transparent;
+    color: #a9a8a8;
+    font-size: 17px;
+    overflow: hidden;
+}
+.alert-button-inner.sc-ion-alert-md {
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    color: dark-gary;
+    color: black;
+    font-size: 17px;
+}
+
+input[type="date"]::before {
+	color: #999999;
+	content: attr(placeholder);
+}
+input[type="date"] {
+	width: 100%;
+    height: 47px;
+    border: 2px solid darkgray;
+    border-radius: 18px;
+    padding: 13px;
+    // margin-top: 34px;
+}
+input[type="date"]:focus,
+input[type="date"]:valid {
+    width: 100%;
+    height: 45px;
+    border: 2px solid darkgray;
+    border-radius: 18px;
+    color: black;
+}
+input[type="date"]:placeholder {
+    color: red;
+  }
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+	content: "" !important;
+}
+.date_style{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    // height: 120px;
+  }
+//   .alert-wrapper.sc-ion-alert-md {
+//     position: absolute;
+//     top: 80px;
+//     right: 6px;
+//     left: 10p;
+//     border-radius: 4px;
+//     -webkit-box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
+//     box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
+// }

@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" mode="md">
+      <ion-back-button defaultHref="/defaultHref"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{'progress' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-list *ngIf="userdatas.length > 0">
+    <ion-item *ngFor="let user of userdatas" (click)="navigateclientprogress(user.uid)">
+      <ion-avatar slot="start">
+        <img [src]="user.photoURL || 'https://ionicframework.com/docs/img/demos/avatar.svg'" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{user.name }}</h2>
+        <h4>{{user.email}}</h4>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

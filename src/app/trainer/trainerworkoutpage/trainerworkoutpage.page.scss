@@ -1,0 +1,63 @@
+/* Apply styles to the list items */
+ion-item {
+    background-color: #f5f5f5;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Hover effect */
+  ion-item:hover {
+    transform: scale(1.03);
+    background-color: #e0e0e0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style for workout name */
+  ion-label h2 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  /* Style for workout description */
+  ion-label p {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* Style for workout type */
+  ion-label p:last-child {
+    font-size: 0.8rem;
+    color: #888;
+  }
+  /* Add a transition effect on hover */
+ion-item {
+    /* Other styles... */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  /* Add a CSS animation on hover */
+  ion-item:hover {
+    transform: scale(1.03);
+    background-color: #e0e0e0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Define the animation for scaling on hover */
+  @keyframes scaleIn {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.03);
+    }
+  }
+  
+  /* Apply the animation */
+  ion-item:hover {
+    animation: scaleIn 0.3s ease-in-out;
+  }
+  

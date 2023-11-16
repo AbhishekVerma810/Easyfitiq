@@ -1,0 +1,42 @@
+ion-header{
+     display: none;
+}
+ion-content {
+    --background: #f4f4f4;
+  }
+  
+  ion-searchbar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
+    height: 102px;
+  }
+  
+  ion-item {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  ion-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  ion-label {
+    padding: 10px;
+  }
+  h2 {
+    font-size: 18px;
+    margin: 0;
+    color: darkgrey;
+    font-family: initial;
+  }
+  .selected-item {
+    background-color: #007bff;
+    color: #fff;
+ }
+ ion-button{
+  --background: #2F5874;
+  color: white;
+ }
+  

@@ -1,0 +1,97 @@
+ion-header{
+    display: none;
+}
+
+.user_header{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    h1{
+         font-weight: 800;
+
+    }
+    h4{
+        margin-top: -8px;
+        font-weight: 600;
+        color: darkgray;
+    }
+}
+.para{
+    margin: 10px;
+    font-weight: 600;
+    color: darkgray;
+
+}
+.custom-card {
+    background-color: #ffffff; /* White background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow effect */
+    height: 45vw;
+    margin-top: 60px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin: 10px; /* Margin to create space between the cards */
+  }
+ /* Styles for the images inside the Swiper */
+/* Style for the Swiper container */
+.custom-swiper-container {
+    margin-top: 40px;
+    border-radius: 20px; /* Add a border-radius of 20px */
+    overflow: hidden; /* Hide content outside the container */
+  }
+  
+  /* Style for the Swiper slides */
+  .swiper-slide {
+    transition: transform 0.3s ease; /* Add a smooth transition for the slide animation */
+  }
+  
+  /* Optional: Center the images horizontally and vertically */
+  .swiper-slide img {
+    // display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Optional: Add hover effect to slides */
+  .swiper-slide:hover {
+    transform: scale(1.05); /* Increase the size of the slide on hover */
+  }
+  swiper-slide {
+    display: flex;
+    position: relative;
+  
+    flex-direction: column;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+  
+    width: 100%;
+    height: 100%;
+  
+    font-size: 18px;
+  
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  swiper-slide img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
+  .home_card_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    ion-icon{
+      width: 115px;
+      height: 101px;
+      color: #2F5874;
+    }
+  }

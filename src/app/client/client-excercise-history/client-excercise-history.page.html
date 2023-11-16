@@ -1,0 +1,67 @@
+<!-- <ion-header>
+  <ion-toolbar>
+   
+        <ion-title>{{"Exercise_History" | translate}}</ion-title>
+    </ion-toolbar>
+   
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let date of getObjectKeys(assignmentsByDate)" class="assignment-card">
+    <ion-card-header class="assignment-header">
+      {{ items.dayName }} {{ items.formattedDate }} 
+    </ion-card-header>
+    <ion-card-content>
+     <ion-list>
+        <ion-item *ngFor="let assignment of assignmentsByDate[date]" class="assignment-item"> 
+           <ion-grid>
+            <ion-row>
+              <ion-col size="12">
+               <h1 class="exercise-name">{{ assignment.exerciseName }}</h1>
+               <p class="sets">{{'Result' | translate}} : {{ assignment.exercises}}</p>
+                <p class="reps"> {{'Reps' | translate}} : {{ assignment.repetitions}}</p>
+                <p class="sets">{{'Sets' | translate}} : {{ assignment.sets }}</p>
+                <p class="duration">{{'Link' | translate}} : {{ assignment.youtubeLink }}</p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content> -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" mode="md">
+      <ion-back-button defaultHref="/defaultHref"></ion-back-button>
+  </ion-buttons> 
+    <ion-title>{{ 'exercise_assignments' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let date of outputArray" class="assignment-card">
+    <ion-card-header class="assignment-header">
+      {{ date.dayName }} {{ date.date }}
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let assignment of date.data" class="assignment-item">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="12">
+                <h2 class="exercise-name">{{ assignment.exerciseName }}</h2>
+                <p class="sets">{{'Result' | translate}} : {{ assignment.exercises}}</p>
+                <p class="reps">{{ 'Reps' | translate }}: {{ assignment.repetitions }}</p>
+                <p class="sets">{{ 'Sets' | translate }}: {{ assignment.sets }}</p>
+                <p class="duration">{{ 'Link' | translate }}: {{ assignment.youtubeLink }}</p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,55 @@
+
+ion-header{
+  ion-toolbar{
+    color: #fff;
+    --background: #2F5874;
+  }
+}
+
+/* Style the card header */
+ion-card-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style the user avatar */
+  ion-avatar {
+    width: 144px;
+    height: 143px;
+    margin-right: 10px;
+  }
+  
+  /* Style the card title and subtitle */
+  ion-card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  ion-card-subtitle {
+    font-size: 1em;
+    color: #777;
+  }
+  
+  /* Style the card content */
+  ion-card-content {
+    padding-top: 10px;
+  }
+  
+  /* Style the experience text */
+  ion-card-content p:nth-child(1) {
+    font-size: 1.1em;
+  }
+  
+  /* Style the links */
+  ion-card-content a {
+    text-decoration: none;
+    color: #007bff; /* Blue color for links */
+    margin-right: 10px;
+  }
+  
+  /* Hover effect for links */
+  ion-card-content a:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Slightly darker blue on hover */
+  }
+  

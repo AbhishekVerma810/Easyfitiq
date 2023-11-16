@@ -1,0 +1,64 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>client-homepage</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div class="user_header"> 
+    <div>
+      <h1>{{'hi' | translate}}, {{username}}</h1>
+      <h4>{{'Lets_check_your_activity' | translate}}</h4>
+    </div>
+      <div>
+        <ion-avatar class="profile-picture">
+          <img [src]= "imageUrl ? imageUrl : 'https://ionicframework.com/docs/img/demos/avatar.svg'">
+        </ion-avatar> 
+      </div>
+  </div>
+    <ion-col size="1" [routerLink]="['/client-track-body']">
+      <ion-card class="custom-card">
+        <div class="home_card_content">
+          <div>
+            <ion-icon name='body'></ion-icon>
+          </div>
+          <div>
+            <h1>{{'track_body' | translate}}</h1>
+            <p>{{'Measure_your_body_for_improvement_in_your_appearance' | translate}}</p> 
+           </div>
+          </div>
+      </ion-card>
+    </ion-col>
+    <ion-col size="1" [routerLink]="['/client-progress']">
+       <ion-card class="custom-card">
+        <!-- <ion-card-header>
+          <h3>Progress</h3>
+        </ion-card-header>
+        <ion-card-content>
+          your every days progress
+        </ion-card-content> -->
+        <div class="home_card_content">
+        <div>
+          <ion-icon name="trending-up-outline"></ion-icon>
+        </div>
+        <div>
+          <h1>{{'progress' | translate}}</h1>
+          <p>. {{'You_can_check_your_daily_progress_here' | translate}}</p> 
+         </div>
+        </div>
+      </ion-card> 
+    </ion-col>
+
+  <!-- <p class="para">Esay Fit</p>
+  <swiper-container
+    #swiper
+    (afterinit)="swiperReady()"
+    (slidechange)="swiperSlideChanged($event)"
+    [loop]="true"
+    [spaceBetween]="20"
+    [autoplay]="{delay:2000}"
+    class="custom-swiper-container">
+    <swiper-slide *ngFor="let imageUrl of images">
+      <img class="swiper_image" [src]="imageUrl" alt="Image">
+      </swiper-slide>
+    </swiper-container> -->
+</ion-content>

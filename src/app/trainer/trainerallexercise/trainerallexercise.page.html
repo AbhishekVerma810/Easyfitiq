@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ 'exercise_assignments' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let date of outputArray" class="assignment-card">
+    <ion-card-header class="assignment-header">
+      {{ date.dayName }} {{ date.date }}
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let assignment of date.data" class="assignment-item">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="12">
+                <h2 class="exercise-name">{{ assignment.exerciseName }}</h2>
+                <p class="reps">{{ 'Date' | translate }}: {{ assignment.startDate }}</p>
+                <p class="reps">{{ 'Reps' | translate }}: {{ assignment.repetitions }}</p>
+                <p class="sets">{{ 'Sets' | translate }}: {{ assignment.sets }}</p>
+                <p class="duration">{{ 'Link' | translate }}: {{ assignment.youtubeLink }}</p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="createItem()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

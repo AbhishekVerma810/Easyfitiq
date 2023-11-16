@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>workouts</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let workout of workouts">
+      <ion-label>
+        <h2>{{ workout.name }}</h2>
+        <p>{{ workout.description }}</p>
+        <p>{{ workout.type }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+

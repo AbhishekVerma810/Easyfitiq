@@ -1,0 +1,35 @@
+ion-header{
+    display: none;
+}
+.Client_list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2{
+        margin-left: 10px;
+        margin-top: 10px;
+        text-align: center;
+        align-items: center;
+    }
+    ion-button{
+        // float: right;
+        height: 55px;
+        --background: #2F5874;
+        margin-top: 12px;
+        text-transform: none;
+        margin-right: 10px;
+    }
+}
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+  }
+  
+  .input-container ion-select {
+    width: 70px; 
+  }
+  
+  .input-container ion-input {
+    flex-grow: 1; 
+  }
